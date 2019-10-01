@@ -1,0 +1,2 @@
+rootProject.name = 'evall'
+include 'evall-common', 'evall-api', 'evall-admin', 'evall-pweb'
