@@ -52,6 +52,8 @@ subprojects {
         compileOnly 'org.projectlombok:lombok'
         annotationProcessor 'org.projectlombok:lombok'
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        compile("javax.servlet:jstl:1.2")
+        compile("org.apache.tomcat.embed:tomcat-embed-jasper")
     }
 
 }
@@ -90,6 +92,22 @@ project(':evall-common') {
 }
 
 project(':evall-api') {
+    dependencies {
+        compile project(':evall-common')
+
+    }
+}
+
+project(':evall-pweb') {
+    dependencies {
+        compile project(':evall-common')
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        compile('org.springframework.boot:spring-boot-devtools')
+
+    }
+}
+
+project(':evall-admin') {
     dependencies {
         compile project(':evall-common')
 
