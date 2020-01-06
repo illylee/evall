@@ -103,6 +103,9 @@ project(':evall-pweb') {
         compile project(':evall-common')
         implementation 'org.springframework.boot:spring-boot-starter-web'
         compile('org.springframework.boot:spring-boot-devtools')
+        compile('org.apache.tomcat.embed:tomcat-embed-jasper')
+        compile('javax.servlet:jstl:1.2')
+        
 
     }
 }
